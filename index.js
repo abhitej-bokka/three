@@ -59,7 +59,7 @@ function addStar() {
 Array(250).fill().forEach(addStar);
 
 // changes bg
-const spaceTexture = new THREE.TextureLoader().load('beach.jpg')
+const spaceTexture = new THREE.TextureLoader().load('jupiter.jpg')
 scene.background = spaceTexture;
 
 // avatar
@@ -73,7 +73,7 @@ const ani = new THREE.Mesh(
 scene.add(ani);
 
 //MOOON
-const moonTexture = new THREE.TextureLoader().load('beach.jpg')
+const moonTexture = new THREE.TextureLoader().load('moon.jpg')
 const imageTexture = new THREE.TextureLoader().load('beach.jpg')
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
