@@ -88,11 +88,11 @@ light1.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({
 color: 0xff0040
 })));
 */
-    const geometrye = new THREE.SphereGeometry(0.5, 24, 24);
+    const geometrye = new THREE.SphereGeometry(50, 24, 24);
     const materiale = new THREE.MeshBasicMaterial({
 color: 0xff0040
 })));
-    const stary = new THREE.Mesh(geometrye, materiale);
+    let stary.add(new THREE.Mesh(geometrye, materiale));
 
     const [x, y, z] = Array(3)
         .fill()
