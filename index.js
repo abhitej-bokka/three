@@ -135,31 +135,37 @@ light1 = new THREE.PointLight(0xff0040, 2, 50);
 light1.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({
     color: 0xff0040
 })));
-scene.add(light1);
+
 
 light2 = new THREE.PointLight(0x0040ff, 2, 50);
 light2.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({
     color: 0x0040ff
 })));
-scene.add(light2);
+
 
 light3 = new THREE.PointLight(0x80ff80, 2, 50);
 light3.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({
     color: 0x80ff80
 })));
-scene.add(light3);
+
 
 light4 = new THREE.PointLight(0xffaa00, 2, 50);
 light4.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({
     color: 0xffaa00
 })));
-scene.add(light4);
+
 
 light5 = new THREE.PointLight(0xffaa00, 2, 50);
 light5.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({
     color: 0xffaa00
 })));
+/*
+scene.add(light1);
+scene.add(light2);
+scene.add(light3);
+scene.add(light4);
 scene.add(light5);
+*/
 
 function moveCamera() {
     // top prop here shows how far we are from the top of the webpage
