@@ -104,8 +104,8 @@ color: 0xff0040
 
 
 // Arra of 250 values and then for each value calls the addStar function
-//Array(250).fill().forEach(addStar);
-Array(250).fill().forEach(addLight);
+Array(250).fill().forEach(addStar);
+//Array(250).fill().forEach(addLight);
 
 // changes bg
 const spaceTexture = new THREE.TextureLoader().load('space.jpg')
