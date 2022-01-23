@@ -60,7 +60,7 @@ scene.add(pointLight, ambientLight);
 // const controls = new OrbitControls(camera, renderer.domElement); // Listen to dom events on the mouse and update the camera pos accordingly
 
 function addStar() {
-  const geometry = new THREE.SphereGeometry(0.25, 24, 24);
+  const geometry = new THREE.SphereGeometry(0.2, 24, 24);
   const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
   const star = new THREE.Mesh(geometry, material);
 
@@ -72,7 +72,7 @@ function addStar() {
   scene.add(star);
 }
 // Arra of 250 values and then for each value calls the addStar function
-Array(250).fill().forEach(addStar);
+Array(256).fill().forEach(addStar);
 
 // changes bg
 const spaceTexture = new THREE.TextureLoader().load('space.jpg')
