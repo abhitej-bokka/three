@@ -48,8 +48,11 @@ pointLight.position.set(5, 5, 5);
 
 const ambientLight = new THREE.AmbientLight(0xffffff);
 
-const ambientLight2 = new THREE.PointLight(0xbd5aff);
-ambientLight2.position.set(-22, 2, 5);
+const ambientLight2 = new THREE.PointLight(0x000000);
+ambientLight2.position.set(-27, 5, 5);
+ambientLight2.decay = 2;
+// moon -10,0,30
+// torus -20, 1, 1
 scene.add(pointLight, ambientLight, ambientLight2);
 
 // const lightHelper = new THREE.PointLightHelper(pointLight)
