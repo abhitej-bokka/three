@@ -80,8 +80,32 @@ function addStar() {
     star.position.set(x, y, z);
     scene.add(star);
 }
+
+function addLight() {
+	/*
+light1 = new THREE.PointLight(0xff0040, 2, 50);
+light1.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({
+color: 0xff0040
+})));
+*/
+    const geometrye = new THREE.SphereGeometry(0.5, 24, 24);
+    const materiale = new THREE.MeshBasicMaterial({
+color: 0xff0040
+})));
+    const stary = new THREE.Mesh(geometrye, materiale);
+
+    const [x, y, z] = Array(3)
+        .fill()
+        .map(() => THREE.MathUtils.randFloatSpread(100));
+
+    stary.position.set(x, y, z);
+    scene.add(stary);
+}
+
+
 // Arra of 250 values and then for each value calls the addStar function
 Array(250).fill().forEach(addStar);
+Array(250).fill().forEach(addLight);
 
 // changes bg
 const spaceTexture = new THREE.TextureLoader().load('space.jpg')
