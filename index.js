@@ -23,7 +23,8 @@ camera.position.setX(-3);
 renderer.render(scene, camera);
 
 
-const geometry2 = new THREE.TorusKnotGeometry( 10, 3, 100, 16 );
+//const geometry2 = new THREE.TorusKnotGeometry( 10, 3, 100, 16 );
+const geometry2 = new THREE.TorusKnotGeometry( 6, 1.5, 100, 16 );
 const material2 = new THREE.MeshBasicMaterial( { color: 0xbd5aff } );
 const torusKnot = new THREE.Mesh( geometry2, material2 );
 scene.add( torusKnot );
@@ -51,7 +52,10 @@ const pointLight = new THREE.PointLight(0xffffff);
 pointLight.position.set(5, 5, 5);
 
 const ambientLight = new THREE.AmbientLight(0xffffff);
-scene.add(pointLight, ambientLight);
+
+const ambientLight2 = new THREE.AmbientLight(0xffffff);
+ambientLight2.position.set(-22, 17, 17);
+scene.add(pointLight, ambientLight, ambientLight2);
 
 // const lightHelper = new THREE.PointLightHelper(pointLight)
 // const gridHelper = new THREE.GridHelper( 200, 50 )
@@ -104,8 +108,8 @@ ani.position.z = -5;
 ani.position.x = 2;
 
 
-torusKnot.position.z = 15;
-torusKnot.position.setX(-15);
+torusKnot.position.z = 20;
+torusKnot.position.setX(0);
 torusKnot.position.y = -1;
 
 // scroll Animation
