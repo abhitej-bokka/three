@@ -64,7 +64,7 @@ scene.background = spaceTexture;
 
 // avatar
 
-const aniTexture = new THREE.TextureLoader().load('beach.jpg')
+const aniTexture = new THREE.TextureLoader().load('abhi.jpg')
 const ani = new THREE.Mesh(
   new THREE.BoxGeometry(6, 6, 6),
   //map prop on the material as a texture
