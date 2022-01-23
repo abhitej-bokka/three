@@ -48,7 +48,7 @@ pointLight.position.set(5, 5, 5);
 
 const ambientLight = new THREE.AmbientLight(0xffffff);
 
-const ambientLight2 = new THREE.PointLight(0x000000);
+const ambientLight2 = new THREE.PointLight(0x808080);
 ambientLight2.position.set(-27, 5, 5);
 ambientLight2.decay = 2;
 // moon -10,0,30
