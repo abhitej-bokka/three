@@ -1,6 +1,6 @@
 # three
 
-## Hello!
+### Hello!
 
 I'm working on a new about me page and I have been experimenting with three.js with the site.
 
