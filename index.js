@@ -59,12 +59,12 @@ function addStar() {
 Array(250).fill().forEach(addStar);
 
 // changes bg
-const spaceTexture = new THREE.TextureLoader().load('jupiter.jpg')
+const spaceTexture = new THREE.TextureLoader().load('space.jpg')
 scene.background = spaceTexture;
 
 // avatar
 
-const aniTexture = new THREE.TextureLoader().load('beach.png')
+const aniTexture = new THREE.TextureLoader().load('beach.jpg')
 const ani = new THREE.Mesh(
   new THREE.BoxGeometry(6, 6, 6),
   //map prop on the material as a texture
