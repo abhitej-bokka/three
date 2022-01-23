@@ -117,7 +117,7 @@ torusKnot.position.z = 1;
 let light1, light2, light3, light4;
 const clock = new THREE.Clock();
 
-const sphere = new THREE.SphereGeometry( 0.5, 16, 8 );
+const sphere = new THREE.SphereGeometry( 100, 16, 8 );
 
         light1 = new THREE.PointLight( 0xff0040, 2, 50 );
 				light1.add( new THREE.Mesh( sphere, new THREE.MeshBasicMaterial( { color: 0xff0040 } ) ) );
@@ -175,8 +175,6 @@ function animate() {
   
   const time = Date.now() * 0.0005;
 				const delta = clock.getDelta();
-
-				if ( object ) object.rotation.y -= 0.5 * delta;
 
 				light1.position.x = Math.sin( time * 0.7 ) * 30;
 				light1.position.y = Math.cos( time * 0.5 ) * 40;
