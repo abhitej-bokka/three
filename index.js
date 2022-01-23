@@ -99,7 +99,8 @@ function moveCamera() {
   ani.rotation.y += 0.01;
   ani.rotation.z += 0.01;
 
-  camera.rotation.z = t * -0.01;
+  //camera.rotation.z = t * -0.01;
+  camera.rotation.z = t * -0.0001;
   camera.rotation.x = t * -0.0002;
   camera.rotation.y = t * -0.0002;
 }
