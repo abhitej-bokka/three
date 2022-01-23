@@ -159,7 +159,7 @@ light5 = new THREE.PointLight(0xffaa00, 2, 50);
 light5.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({
     color: 0xffaa00
 })));
-scene.add(light4);
+scene.add(light5);
 
 function moveCamera() {
     // top prop here shows how far we are from the top of the webpage
