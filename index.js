@@ -169,28 +169,46 @@ function animate() {
   torusKnot.rotation.x += 0.005; // rotation along x axis
   torusKnot.rotation.y += 0.005;; // roatation along y axis
   torusKnot.rotation.z += 0.005; // rotation on z axis
+	
+	
+	/*
+				light1.position.x = 0;
+				light1.position.y = 0;
+				light1.position.z = 0;
 
+				light2.position.x = 5;
+				light2.position.y = 5;
+				light2.position.z = 5;
+
+				light3.position.x = -3;
+				light3.position.y = -3;
+				light3.position.z = -3;
+
+				light4.position.x = 1;
+				light4.position.y = 1;
+				light4.position.z = 7;
+*/
   moon.rotation.x += 0.005;
   
   
   const time = Date.now() * 0.0005;
 				const delta = clock.getDelta();
 
-				light1.position.x = Math.sin( time * 0.7 ) * 30;
-				light1.position.y = Math.cos( time * 0.5 ) * 40;
-				light1.position.z = Math.cos( time * 0.3 ) * 30;
+				light1.position.x = Math.sin( time * 0.7 ) * 10;
+				light1.position.y = Math.cos( time * 0.5 ) * 20;
+				light1.position.z = Math.cos( time * 0.3 ) * 10;
 
-				light2.position.x = Math.cos( time * 0.3 ) * 30;
-				light2.position.y = Math.sin( time * 0.5 ) * 40;
+				light2.position.x = Math.cos( time * 0.3 ) * 10;
+				light2.position.y = Math.sin( time * 0.5 ) * 20;
 				light2.position.z = Math.sin( time * 0.7 ) * 30;
 
 				light3.position.x = Math.sin( time * 0.7 ) * 30;
-				light3.position.y = Math.cos( time * 0.3 ) * 40;
-				light3.position.z = Math.sin( time * 0.5 ) * 30;
+				light3.position.y = Math.cos( time * 0.3 ) *  0;
+				light3.position.z = Math.sin( time * 0.5 ) * 20;
 
-				light4.position.x = Math.sin( time * 0.3 ) * 30;
-				light4.position.y = Math.cos( time * 0.7 ) * 40;
-				light4.position.z = Math.sin( time * 0.5 ) * 30;
+				light4.position.x = Math.sin( time * 0.3 ) * 10;
+				light4.position.y = Math.cos( time * 0.7 ) *  0;
+				light4.position.z = Math.sin( time * 0.5 ) * 10;
   //controls.update();
 
   renderer.render(scene, camera);
