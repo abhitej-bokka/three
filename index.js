@@ -104,9 +104,9 @@ ani.position.z = -5;
 ani.position.x = 2;
 
 
-moon.position.z = 15;
-moon.position.setX(-15);
-moon.position.y = -1;
+torusKnot.position.z = 15;
+torusKnot.position.setX(-15);
+torusKnot.position.y = -1;
 
 // scroll Animation
 
