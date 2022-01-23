@@ -21,10 +21,26 @@ camera.position.setZ(30);
 camera.position.setX(-3);
 
 renderer.render(scene, camera);
+
+
+const geometry2 = new THREE.TorusKnotGeometry( 10, 3, 100, 16 );
+const material2 = new THREE.MeshBasicMaterial( { color: 0xbd5aff } );
+const torusKnot = new THREE.Mesh( geometry2, material2 );
+scene.add( torusKnot );
+
+
+
+
+
+
+
 // object
 // Torus
 const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
-const material = new THREE.MeshStandardMaterial({ color: 0xff6347 });
+//changed color 1-23-22
+//const material = new THREE.MeshStandardMaterial({ color: 0xff6347 });
+const material = new THREE.MeshStandardMaterial({ color: 0x479eff });
+
 const torus = new THREE.Mesh(geometry, material);
 //adding to the scene below
 
@@ -118,6 +134,11 @@ function animate() {
   torus.rotation.x += 0.01; // rotation along x axis
   torus.rotation.y += 0.005; // roatation along y axis
   torus.rotation.z += 0.01; // rotation on z axis
+  
+  
+  torusKnot.rotation.x += 0.005; // rotation along x axis
+  torusKnot.rotation.y += 0.005;; // roatation along y axis
+  torusKnot.rotation.z += 0.005; // rotation on z axis
 
   moon.rotation.x += 0.005;
   //controls.update();
