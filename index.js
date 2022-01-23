@@ -80,14 +80,14 @@ function addStar() {
     star.position.set(x, y, z);
     scene.add(star);
 }
-
+/*
 function addLight() {
-	/*
+
 light1 = new THREE.PointLight(0xff0040, 2, 50);
 light1.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({
 color: 0xff0040
 })));
-*/
+
     const geometrye = new THREE.SphereGeometry(50, 24, 24);
     const materiale = new THREE.MeshBasicMaterial({
 color: 0xff0040
@@ -101,7 +101,7 @@ color: 0xff0040
     stary.position.set(x, y, z);
     scene.add(stary);
 }
-
+*/
 
 // Arra of 250 values and then for each value calls the addStar function
 Array(250).fill().forEach(addStar);
@@ -265,7 +265,7 @@ function animate() {
     light4.position.x = Math.sin(time * 0.3) * 10;
     light4.position.y = Math.cos(time * 0.7) * 0;
     light4.position.z = Math.sin(time * 0.5) * 10;
-	
+
     light5.position.x = -20;
     light5.position.y = 2;
     light5.position.z = 2;
