@@ -25,14 +25,9 @@ renderer.render(scene, camera);
 
 //const geometry2 = new THREE.TorusKnotGeometry( 10, 3, 100, 16 );
 const geometry2 = new THREE.TorusKnotGeometry( 3, 0.75, 100, 16 );
-const material2 = new THREE.MeshBasicMaterial( { color: 0xbd5aff } );
+const material2 = new THREE.MeshBasicMaterial( { color: 0xff6347 } );
 const torusKnot = new THREE.Mesh( geometry2, material2 );
 scene.add( torusKnot );
-
-
-
-
-
 
 
 // object
@@ -53,8 +48,8 @@ pointLight.position.set(5, 5, 5);
 
 const ambientLight = new THREE.AmbientLight(0xffffff);
 
-const ambientLight2 = new THREE.PointLight(0xffffff);
-ambientLight2.position.set(-22, 170, 17);
+const ambientLight2 = new THREE.PointLight(0xbd5aff);
+ambientLight2.position.set(-22, 2, 5);
 scene.add(pointLight, ambientLight, ambientLight2);
 
 // const lightHelper = new THREE.PointLightHelper(pointLight)
