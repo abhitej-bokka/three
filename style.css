@@ -74,7 +74,10 @@ canvas {
   }
 
   blockquote p {
-    color: rgb(247, 236, 236);
+    /*color: rgb(247, 236, 236);
+      more purlple;
+     */
+    color: rgb(255, 200, 230);
     /* background-color: rgb(20, 17, 17); */
     font-size: 4rem;
     display: inline;
