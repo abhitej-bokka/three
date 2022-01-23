@@ -64,7 +64,7 @@ scene.background = spaceTexture;
 
 // avatar
 
-const aniTexture = new THREE.TextureLoader().load('beach.jpg')
+const aniTexture = new THREE.TextureLoader().load('beach.png')
 const ani = new THREE.Mesh(
   new THREE.BoxGeometry(6, 6, 6),
   //map prop on the material as a texture
@@ -73,7 +73,7 @@ const ani = new THREE.Mesh(
 scene.add(ani);
 
 //MOOON
-const moonTexture = new THREE.TextureLoader().load('css3.png')
+const moonTexture = new THREE.TextureLoader().load('beach.jpg')
 const imageTexture = new THREE.TextureLoader().load('beach.jpg')
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
@@ -125,15 +125,3 @@ function animate() {
 }
 
 animate();
-
-
-
-
-
-
-
-
-
-
-
-
