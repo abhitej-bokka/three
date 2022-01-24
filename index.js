@@ -142,7 +142,7 @@ moon.position.z = 30;
 
 ani.position.x = 15;
 ani.position.z = -5;
-torus.position.x = 15;
+torus.position.setX(15);
 // Ani: (15,0,-5)
 // Torus: (15,0,0)
 
