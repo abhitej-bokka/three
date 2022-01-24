@@ -123,6 +123,7 @@ const ani = new THREE.Mesh(
 );
 scene.add(ani);
 
+
 //MOOON
 const moonTexture = new THREE.TextureLoader().load('moon.jpg')
 const imageTexture = new THREE.TextureLoader().load('beach.jpg')
@@ -135,16 +136,20 @@ const moon = new THREE.Mesh(
 );
 scene.add(moon);
 // Repostionisng moon to further down of z axis as that is the direction of scroll
-moon.position.z = 30;
 moon.position.setX(-10);
+moon.position.z = 30;
+// Moon: (-10,0,30)
 
+ani.position.x = 5;
 ani.position.z = -5;
-ani.position.x = 2;
+// Ani: (5,0,-5)
+// Torus: (0,0,0)
+
 
 torusKnot.position.setX(-20);
 torusKnot.position.y = 1;
 torusKnot.position.z = 1;
-
+// Knot: (-20,1,1)
 // scroll Animation
 
 
