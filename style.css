@@ -15,7 +15,7 @@ canvas {
 :root {
   --dark-bg: rgba(15, 15, 15, 0.95);
   --spacing: 350px;
-
+  --light-bg: rgba(255, 255, 255, 1);
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -65,6 +65,24 @@ canvas {
     line-height: 1.5;
     margin-bottom: var(--spacing);
   }
+
+header2 {
+    background: var(--light-bg);
+    grid-column: 2 / span 5;
+    font-size: 2.5rem;
+    padding: 2rem;
+    margin-bottom: var(--spacing);
+  }
+
+  section2 {
+    grid-column: 2 / 8;
+    padding: 1rem;
+    background: var(--light-bg);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing);
+  }
+
 
   blockquote {
     margin: 0;
