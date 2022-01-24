@@ -39,7 +39,8 @@ const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
 //changed color 1-23-22
 //const material = new THREE.MeshStandardMaterial({ color: 0xff6347 });
 const material = new THREE.MeshStandardMaterial({
-    color: 0x479eff
+    //color: 0x479eff
+    color: 0x502a56
 });
 
 const torus = new THREE.Mesh(geometry, material);
