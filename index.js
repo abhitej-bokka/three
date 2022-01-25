@@ -80,6 +80,30 @@ donut9.position.set(THREE.MathUtils.randFloatSpread(100), THREE.MathUtils.randFl
 
 scene.add(donut10);
 donut10.position.set(THREE.MathUtils.randFloatSpread(100), THREE.MathUtils.randFloat(low: -15, high: 30), THREE.MathUtils.randFloat(low: -30, high: 20));
+
+scene.add(donut13);
+donut13.position.set(THREE.MathUtils.randFloatSpread(100), THREE.MathUtils.randFloat(low: -15, high: 30), THREE.MathUtils.randFloat(low: -30, high: 20));
+
+scene.add(donut14);
+donut14.position.set(THREE.MathUtils.randFloatSpread(100), THREE.MathUtils.randFloat(low: -15, high: 30), THREE.MathUtils.randFloat(low: -30, high: 20));
+
+scene.add(donut15);
+donut15.position.set(THREE.MathUtils.randFloatSpread(100), THREE.MathUtils.randFloat(low: -15, high: 30), THREE.MathUtils.randFloat(low: -30, high: 20));
+
+scene.add(donut16);
+donut16.position.set(THREE.MathUtils.randFloatSpread(100), THREE.MathUtils.randFloat(low: -15, high: 30), THREE.MathUtils.randFloat(low: -30, high: 20));
+
+scene.add(donut17);
+donut17.position.set(THREE.MathUtils.randFloatSpread(100), THREE.MathUtils.randFloat(low: -15, high: 30), THREE.MathUtils.randFloat(low: -30, high: 20));
+
+scene.add(donut18);
+donut18.position.set(THREE.MathUtils.randFloatSpread(100), THREE.MathUtils.randFloat(low: -15, high: 30), THREE.MathUtils.randFloat(low: -30, high: 20));
+
+scene.add(donut19);
+donut19.position.set(THREE.MathUtils.randFloatSpread(100), THREE.MathUtils.randFloat(low: -15, high: 30), THREE.MathUtils.randFloat(low: -30, high: 20));
+
+scene.add(donut20);
+donut20.position.set(THREE.MathUtils.randFloatSpread(100), THREE.MathUtils.randFloat(low: -15, high: 30), THREE.MathUtils.randFloat(low: -30, high: 20));
 //END MULTIPLE
 
 
