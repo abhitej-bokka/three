@@ -3,7 +3,7 @@ import * as THREE from "https://unpkg.com/three@0.127.0/build/three.module.js";
 import {
     OrbitControls
 } from "https://unpkg.com/three@0.127.0/examples/jsm/controls/OrbitControls.js";
-var sign = Math.round(Math.random()) * 2 - 1;
+//var sign = Math.round(Math.random()) * 2 - 1;
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
@@ -42,21 +42,21 @@ const donutglazed = loader2.load('https://upload.wikimedia.org/wikipedia/commons
 
 const donutGeometry = new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc);
 const donutMaterial = new THREE.MeshPhongMaterial({map: donutglazed});
-const bigRadius = 5, bigTube = 2.8;
-const bigDonutGeometry = new THREE.TorusGeometry(bigRadius, bigTube, radialSegments, tubularSegments, arc);
+//const bigRadius = 5, bigTube = 2.8;
+//const bigDonutGeometry = new THREE.TorusGeometry(bigRadius, bigTube, radialSegments, tubularSegments, arc);
 
 const donut1 = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc), donutMaterial);
 scene.add(donut1);
 donut1.position.set(-10, 0, 10);
-
+/*
 const donut2 = new THREE.Mesh(donutGeometry, donutMaterial);
 scene.add(donut2);
-donut2.position.set(-15, 20, 10);
+donut2.position.set(-15, -20, -10);
 
 const donut3 = new THREE.Mesh(donutGeometry, donutMaterial);
 scene.add(donut3);
 donut3.position.set(-20, -20, -20);
-
+*/
 const torusKnot = new THREE.Mesh(donutGeometry, donutMaterial);
 scene.add(torusKnot);
 torusKnot.position.setX(-20);
@@ -147,10 +147,6 @@ moon.position.setX(-10);
 moon.position.z = 30;
 
 
-
-
-
-
 //Added by Abhitej - 1/23/22
 
 let light1, light2, light3, light4, light5;
@@ -227,11 +223,11 @@ function animate() {
     donut1.rotation.x += 0.01; // rotation along x axis
     donut1.rotation.y -= 0.005; // roatation along y axis
     donut1.rotation.z -= 0.02; // rotation on z axis
-
+/*
     donut2.rotation.x += 0.0075; // rotation along x axis
     donut2.rotation.y -= 0.01; // roatation along y axis
     donut2.rotation.z += 0.015; // rotation on z axis
-
+*/
 
     torusKnot.rotation.x += 0.005; // rotation along x axis
     torusKnot.rotation.y -= 0.005; // roatation along y axis
