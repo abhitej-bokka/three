@@ -33,7 +33,7 @@ const torusKnot = new THREE.Mesh(geometry2, material2);
 scene.add(torusKnot);
 
 
-
+/*
 //Added 1/25/22
 
 //DONUT 1
@@ -47,7 +47,7 @@ scene.add(donut1);
      donut1.position.set(5, 0, 0);
 //DONUT 2
 //Stopped 1/25/22
-
+*/
 
 // object
 // Torus
@@ -244,11 +244,11 @@ function animate() {
     torus.rotation.x += 0.01; // rotation along x axis
     torus.rotation.y += 0.005; // roatation along y axis
     torus.rotation.z += 0.01; // rotation on z axis
-	
+/*	
     donut1.rotation.x += 0.01; // rotation along x axis
     donut1.rotation.y += 0.005; // roatation along y axis
     donut1.rotation.z += 0.01; // rotation on z axis
-
+*/
 
     torusKnot.rotation.x += 0.005; // rotation along x axis
     torusKnot.rotation.y += 0.005;; // roatation along y axis
