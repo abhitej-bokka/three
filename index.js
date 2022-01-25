@@ -41,6 +41,48 @@ scene.add(donut1);
 donut1.position.set(-10, 0, 10);
 // FINISHED DONUT #1
 
+// MULTIPLE VIEWABLE DONUTS
+
+const donut2 = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc), donutMaterial);
+const donut3 = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc), donutMaterial);
+const donut4 = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc), donutMaterial);
+const donut5 = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc), donutMaterial);
+const donut6 = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc), donutMaterial);
+const donut7 = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc), donutMaterial);
+const donut8 = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc), donutMaterial);
+const donut9 = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc), donutMaterial);
+const donut10 = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc), donutMaterial);
+
+
+scene.add(donut2);
+donut2.position.set(-15, 20, 10);
+
+scene.add(donut3);
+donut3.position.set(THREE.MathUtils.randFloatSpread(100), THREE.MathUtils.randFloat(low: -15, high: 30), THREE.MathUtils.randFloat(low: -30, high: 20));
+
+scene.add(donut4);
+donut4.position.set(THREE.MathUtils.randFloatSpread(100), THREE.MathUtils.randFloat(low: -15, high: 30), THREE.MathUtils.randFloat(low: -30, high: 20));
+
+scene.add(donut5);
+donut5.position.set(THREE.MathUtils.randFloatSpread(100), THREE.MathUtils.randFloat(low: -15, high: 30), THREE.MathUtils.randFloat(low: -30, high: 20));
+
+scene.add(donut6);
+donut6.position.set(THREE.MathUtils.randFloatSpread(100), THREE.MathUtils.randFloat(low: -15, high: 30), THREE.MathUtils.randFloat(low: -30, high: 20));
+
+scene.add(donut7);
+donut7.position.set(THREE.MathUtils.randFloatSpread(100), THREE.MathUtils.randFloat(low: -15, high: 30), THREE.MathUtils.randFloat(low: -30, high: 20));
+
+scene.add(donut8);
+donut8.position.set(THREE.MathUtils.randFloatSpread(100), THREE.MathUtils.randFloat(low: -15, high: 30), THREE.MathUtils.randFloat(low: -30, high: 20));
+
+scene.add(donut9);
+donut9.position.set(THREE.MathUtils.randFloatSpread(100), THREE.MathUtils.randFloat(low: -15, high: 30), THREE.MathUtils.randFloat(low: -30, high: 20));
+
+scene.add(donut10);
+donut10.position.set(THREE.MathUtils.randFloatSpread(100), THREE.MathUtils.randFloat(low: -15, high: 30), THREE.MathUtils.randFloat(low: -30, high: 20));
+//END MULTIPLE
+
+
 
 // DONUT BUILDER
 
@@ -50,7 +92,7 @@ function addDonut() {
         .fill()
         .map(() => THREE.MathUtils.randFloatSpread(100));
 
-    star.position.set(x, y, z);
+    nextDonut.position.set(x, y, z);
     scene.add(nextDonut);
   /* 
 if(THREE.MathUtils.randFloatSpread(100) > 0) {
@@ -75,7 +117,7 @@ if(THREE.MathUtils.randFloatSpread(100) > 0) {
     
 }
 
-Array(30).fill().forEach(addDonut);
+//Array(30).fill().forEach(addDonut);
 //
 
 
