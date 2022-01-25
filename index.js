@@ -42,12 +42,12 @@ donut1.position.set(-10, 0, 10);
 // FINISHED DONUT #1
 
 // MULTIPLE VIEWABLE DONUTS
-
+/*
 const donut2 = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc), donutMaterial);
 scene.add(donut2);
 donut2.position.set(-15, 20, 10);
 
-/*
+
 
 const donut3 = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc), donutMaterial);
 const donut4 = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc), donutMaterial);
