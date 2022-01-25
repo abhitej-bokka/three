@@ -37,7 +37,7 @@ scene.add(torusKnot);
 //Added 1/25/22
 
 //DONUT 1
-
+const radius = 25, tube = 14, radialSegments = 25, tubularSegments = 66, arc = Math.PI * 2;
 const donutMaterial1 = new THREE.MeshPhongMaterial({color: 0xFFC0CB, opacity: 0.3, transparent: true}); // donut/torus #1 material
 	const donut1 = new THREE.Mesh(
 	   new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc),
@@ -46,7 +46,7 @@ const donutMaterial1 = new THREE.MeshPhongMaterial({color: 0xFFC0CB, opacity: 0.
 scene.add(donut1);
 
 //DONUT 2
-const radius = 25, tube = 14, radialSegments = 25, tubularSegments = 66, arc = Math.PI * 2;
+
 const loader2 = new THREE.TextureLoader();
 	loader2.crossOrigin = '';
 const donutsprinkles = loader2.load('https://s3-us-west-2.amazonaws.com/sabrinamarkon-images/images/pinkdonutwithsprinkles.png');
