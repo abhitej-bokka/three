@@ -4,7 +4,7 @@ import {
     OrbitControls
 } from "https://unpkg.com/three@0.127.0/examples/jsm/controls/OrbitControls.js";
 const scene = new THREE.Scene();
-
+var sign = Math.round(Math.random()) * 2 - 1;
 const camera = new THREE.PerspectiveCamera(
     75,
     window.innerWidth / window.innerHeight,
@@ -47,11 +47,11 @@ const donut2 = new THREE.Mesh(donutGeometry, donutMaterial);
 scene.add(donut2);
 donut2.position.set(-15, 20, 10);
 
-/*
+
 const donut3 = new THREE.Mesh(donutGeometry, donutMaterial);
 scene.add(donut3);
-donut3.position.set(THREE.MathUtils.randFloatSpread(60), THREE.MathUtils.randFloatSpread(60), THREE.MathUtils.randFloat(low: -30, high: 20));
-*/
+donut3.position.set(THREE.MathUtils.randInt(low: -30, high: 20), THREE.MathUtils.randInt(low: -30, high: 20), THREE.MathUtils.randInt(low: -30, high: 20));
+
 
 // MULTIPLE VIEWABLE DONUTS
 /*
@@ -168,7 +168,7 @@ if(THREE.MathUtils.randFloatSpread(100) > 0) {
 //
 */
 
-const bigRadius = 10, bigTube = 5.6;
+const bigRadius = 5, bigTube = 2.8;
 const bigDonutGeometry = new THREE.TorusGeometry(bigRadius, bigTube, radialSegments, tubularSegments, arc);
 
 /*const geometry2 = new THREE.TorusGeometry(3, 0.75, 100, 16);
@@ -395,10 +395,14 @@ function animate() {
     donut1.rotation.x += 0.01; // rotation along x axis
     donut1.rotation.y -= 0.005; // roatation along y axis
     donut1.rotation.z -= 0.02; // rotation on z axis
+	
+    donut2.rotation.x += 0.0075; // rotation along x axis
+    donut2.rotation.y -= 0.01; // roatation along y axis
+    donut2.rotation.z += 0.015; // rotation on z axis
 
 
     torusKnot.rotation.x += 0.005; // rotation along x axis
-    torusKnot.rotation.y += 0.005; // roatation along y axis
+    torusKnot.rotation.y -= 0.005; // roatation along y axis
     torusKnot.rotation.z += 0.005; // rotation on z axis
 
 
