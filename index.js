@@ -59,7 +59,7 @@ if(THREE.MathUtils.randFloatSpread(100) > 0) {
 	const nextDonut = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc), donutMaterial);
 	const [x, y, z] = Array(3)
         .fill()
-        .map(() => THREE.MathUtils.randFloatSpread(low:100 high:-10));
+        .map(() => THREE.MathUtils.randFloatSpread(low:-100 high:-10));
 
     star.position.set(x, y, z);
     scene.add(nextDonut);
