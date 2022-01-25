@@ -33,6 +33,25 @@ const torusKnot = new THREE.Mesh(geometry2, material2);
 scene.add(torusKnot);
 
 
+
+//Added 1/25/22
+
+//DONUT 2
+const radius = 25, tube = 14, radialSegments = 25, tubularSegments = 66, arc = Math.PI * 2;
+const loader2 = new THREE.TextureLoader();
+	loader2.crossOrigin = '';
+const donutsprinkles = loader2.load('https://s3-us-west-2.amazonaws.com/sabrinamarkon-images/images/pinkdonutwithsprinkles.png');
+	const donutMaterial2 = new THREE.MeshPhongMaterial({map: donutsprinkles});  // donut/torus #2 material
+	const donut2 = new THREE.Mesh(
+		   new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc),
+		   donutMaterial2);
+scene.add(donut2);
+donut2.position.set(-10, 0, 10);
+
+
+//Stopped 1/25/22
+
+
 // object
 // Torus
 const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
@@ -228,6 +247,10 @@ function animate() {
     torus.rotation.x += 0.01; // rotation along x axis
     torus.rotation.y += 0.005; // roatation along y axis
     torus.rotation.z += 0.01; // rotation on z axis
+	
+    donut2.rotation.x += 0.01; // rotation along x axis
+    donut2.rotation.y += 0.005; // roatation along y axis
+    donut2.rotation.z += 0.01; // rotation on z axis
 
 
     torusKnot.rotation.x += 0.005; // rotation along x axis
