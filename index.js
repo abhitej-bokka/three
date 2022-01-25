@@ -56,13 +56,13 @@ donut2.position.set(-15, -20, -10);
 const donut3 = new THREE.Mesh(donutGeometry, donutMaterial);
 scene.add(donut3);
 donut3.position.set(-20, -20, -20);
-*/
+
 const torusKnot = new THREE.Mesh(donutGeometry, donutMaterial);
 scene.add(torusKnot);
 torusKnot.position.setX(-20);
 torusKnot.position.y = 1;
 torusKnot.position.z = 1;
-
+*/
 const torus = new THREE.Mesh(geometry, donutMaterial);
 scene.add(torus);
 torus.position.setX(13.5);
@@ -227,13 +227,13 @@ function animate() {
     donut2.rotation.x += 0.0075; // rotation along x axis
     donut2.rotation.y -= 0.01; // roatation along y axis
     donut2.rotation.z += 0.015; // rotation on z axis
-*/
+
 
     torusKnot.rotation.x += 0.005; // rotation along x axis
     torusKnot.rotation.y -= 0.005; // roatation along y axis
     torusKnot.rotation.z += 0.005; // rotation on z axis
 
-
+*/
     /*
     				light1.position.x = 0;
     				light1.position.y = 0;
