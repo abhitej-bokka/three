@@ -45,8 +45,14 @@ donut1.position.set(-10, 0, 10);
 // DONUT BUILDER
 
 function addDonut() {
-    
-   
+    const nextDonut = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc), donutMaterial);
+	const [x, y, z] = Array(3)
+        .fill()
+        .map(() => THREE.MathUtils.randFloatSpread(100));
+
+    star.position.set(x, y, z);
+    scene.add(nextDonut);
+  /* 
 if(THREE.MathUtils.randFloatSpread(100) > 0) {
 	const nextDonut = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc), donutMaterial);
 	const [x, y, z] = Array(3)
@@ -64,12 +70,12 @@ if(THREE.MathUtils.randFloatSpread(100) > 0) {
     star.position.set(x, y, z);
     scene.add(nextDonut);
 }
-	
+*/	
 	
     
 }
 
-Array(25).fill().forEach(addDonut);
+Array(30).fill().forEach(addDonut);
 //
 
 
