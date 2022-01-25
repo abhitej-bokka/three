@@ -47,10 +47,12 @@ const donut2 = new THREE.Mesh(donutGeometry, donutMaterial);
 scene.add(donut2);
 donut2.position.set(-15, 20, 10);
 
-
+/*
 const donut3 = new THREE.Mesh(donutGeometry, donutMaterial);
 scene.add(donut3);
 donut3.position.set(THREE.MathUtils.randFloatSpread(60), THREE.MathUtils.randFloatSpread(60), THREE.MathUtils.randFloat(low: -30, high: 20));
+*/
+
 // MULTIPLE VIEWABLE DONUTS
 /*
 
