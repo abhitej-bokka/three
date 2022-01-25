@@ -260,7 +260,7 @@ function animate() {
 
     const time = Date.now() * 0.0005;
     const delta = clock.getDelta();
-
+/*
     donut1.position.x += Math.sin(time * 0.7) * 1;
     donut1.position.y += Math.cos(time * 0.5) * 2;
     donut1.position.z += Math.cos(time * 0.3) * 1;
@@ -277,7 +277,7 @@ function animate() {
     torusKnot.position.y += Math.cos(time * 0.7) * 2.5;
     torusKnot.position.z += Math.sin(time * 0.5) * 2;
 
-
+*/
     renderer.render(scene, camera);
 }
 
