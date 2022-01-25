@@ -42,9 +42,9 @@ const donutMaterial1 = new THREE.MeshPhongMaterial({color: 0xFFC0CB, opacity: 0.
 	const donut1 = new THREE.Mesh(
 	   new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc),
 	   donutMaterial1);
-     donut1.position.set(5, 0, 0);
-scene.add(donut1);
 
+scene.add(donut1);
+     donut1.position.set(5, 0, 0);
 //DONUT 2
 
 const loader2 = new THREE.TextureLoader();
