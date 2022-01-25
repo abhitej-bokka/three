@@ -41,7 +41,9 @@ const radius = 5, tube = 2.8, radialSegments = 25, tubularSegments = 66, arc = M
 //
 const loader2 = new THREE.TextureLoader();
 	loader2.crossOrigin = '';
-	const donutsprinkles = loader2.load('https://s3-us-west-2.amazonaws.com/sabrinamarkon-images/images/pinkdonutwithsprinkles.png');
+	const donutsprinkles = loader2.load('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Donut_texture%2C_Doughnut.jpg/800px-Donut_texture%2C_Doughnut.jpg');
+	//
+	//const donutsprinkles = loader2.load('https://s3-us-west-2.amazonaws.com/sabrinamarkon-images/images/pinkdonutwithsprinkles.png');
 	const donutMaterial2 = new THREE.MeshPhongMaterial({map: donutsprinkles});  // donut/torus #2 material
 //
 const donutMaterial1 = new THREE.MeshPhongMaterial({color: 0xFFC0CB, opacity: 0.93, transparent: true}); // donut/torus #1 material
