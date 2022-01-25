@@ -166,12 +166,15 @@ if(THREE.MathUtils.randFloatSpread(100) > 0) {
 //
 */
 
-//const geometry2 = new THREE.TorusKnotGeometry( 10, 3, 100, 16 );
-const geometry2 = new THREE.TorusGeometry(3, 0.75, 100, 16);
+const bigRadius = 10, bigTube = 5.6;
+const bigDonutGeometry = new THREE.TorusGeometry(bigRadius, bigTube, radialSegments, tubularSegments, arc);
+
+/*const geometry2 = new THREE.TorusGeometry(3, 0.75, 100, 16);
 const material2 = new THREE.MeshBasicMaterial({
     color: 0xff6347
 });
-const torusKnot = new THREE.Mesh(geometry2, donutMaterial);
+*/
+const torusKnot = new THREE.Mesh(bigDonutGeometry, donutMaterial);
 scene.add(torusKnot);
 
 
@@ -199,7 +202,7 @@ const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
 const material = new THREE.MeshStandardMaterial({
     //color: 0x479eff
     //color: 0x301934
-    color: 0x502a56
+    color: 0x502a5
 });
 
 const torus = new THREE.Mesh(geometry, donutMaterial);
