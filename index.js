@@ -44,6 +44,11 @@ donut1.position.set(-10, 0, 10);
 // MULTIPLE VIEWABLE DONUTS
 
 const donut2 = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc), donutMaterial);
+scene.add(donut2);
+donut2.position.set(-15, 20, 10);
+
+/*
+
 const donut3 = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc), donutMaterial);
 const donut4 = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc), donutMaterial);
 const donut5 = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc), donutMaterial);
@@ -63,8 +68,7 @@ const donut19 = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, radialSegme
 const donut20 = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc), donutMaterial);
 
 
-scene.add(donut2);
-donut2.position.set(-15, 20, 10);
+
 
 scene.add(donut3);
 donut3.position.set(THREE.MathUtils.randFloatSpread(100), THREE.MathUtils.randFloat(low: -15, high: 30), THREE.MathUtils.randFloat(low: -30, high: 20));
@@ -115,10 +119,10 @@ scene.add(donut20);
 donut20.position.set(THREE.MathUtils.randFloatSpread(100), THREE.MathUtils.randFloat(low: -15, high: 30), THREE.MathUtils.randFloat(low: -30, high: 20));
 //END MULTIPLE
 
-
+*/
 
 // DONUT BUILDER
-
+  /* 
 function addDonut() {
     const nextDonut = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc), donutMaterial);
 	const [x, y, z] = Array(3)
@@ -127,7 +131,7 @@ function addDonut() {
 
     nextDonut.position.set(x, y, z);
     scene.add(nextDonut);
-  /* 
+
 if(THREE.MathUtils.randFloatSpread(100) > 0) {
 	const nextDonut = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc), donutMaterial);
 	const [x, y, z] = Array(3)
@@ -145,14 +149,14 @@ if(THREE.MathUtils.randFloatSpread(100) > 0) {
     star.position.set(x, y, z);
     scene.add(nextDonut);
 }
-*/	
+	
 	
     
 }
 
 //Array(30).fill().forEach(addDonut);
 //
-
+*/
 
 //const geometry2 = new THREE.TorusKnotGeometry( 10, 3, 100, 16 );
 const geometry2 = new THREE.TorusGeometry(3, 0.75, 100, 16);
