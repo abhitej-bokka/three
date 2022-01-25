@@ -46,7 +46,7 @@ const donutsprinkles = loader2.load('https://s3-us-west-2.amazonaws.com/sabrinam
 		   new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc),
 		   donutMaterial2);
 scene.add(donut2);
-donut2.position.set(-10, 0, 10);
+donut2.position.setX(10);
 
 
 //Stopped 1/25/22
