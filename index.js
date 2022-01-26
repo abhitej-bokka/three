@@ -81,7 +81,7 @@ function addStar() {
 Array(250).fill().forEach(addStar);
 
 // changes bg
-const spaceTexture = new THREE.TextureLoader().load('space.jpg')
+const spaceTexture = new THREE.TextureLoader().load('abhi.jpg')
 scene.background = spaceTexture;
 // avatar
 const aniTexture = new THREE.TextureLoader().load('abhi.jpg')
