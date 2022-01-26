@@ -2,7 +2,7 @@
 import * as THREE from "https://unpkg.com/three@0.127.0/build/three.module.js";
 import { OrbitControls } from "https://unpkg.com/three@0.127.0/examples/jsm/controls/OrbitControls.js";
 
-
+var theta = 0;
 
 
 const scene = new THREE.Scene();
@@ -128,7 +128,7 @@ moon.position.setX(-10);
 //moon.position.set(-10,0,30);
 
 orbit.position.setX(-6);
-orbit.position.z = 30;
+orbit.position.z = -20;
 
 
 abhi.position.x = 17;
@@ -182,10 +182,11 @@ function animate() {
  donut2.rotation.y += 0.02; // roatation along y axis
  donut2.rotation.z += 0.04; // rotation on z axis
 
+ theta += Math.PI/100;
  
- orbit.position.x += Math.sin(time) * 0.5;
- orbit.position.y += Math.cos(time) * 0.5;
- orbit.position.z += Math.cos(time) * 0.5;
+ orbit.position.x += Math.sin(theta) * 0.5;
+ orbit.position.y += Math.cos(theta) * 0.5;
+ orbit.position.z += Math.cos(theta) * 0.5;
 
  orbit.rotation.x -= 0.008; // rotation along x axis
  orbit.rotation.y += 0.02; // roatation along y axis
