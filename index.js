@@ -37,7 +37,7 @@ const donutMaterial = new THREE.MeshPhongMaterial({map: donutglazed});
 // First DONUT
 const donut1 = new THREE.Mesh(donutGeometry, donutMaterial);
 scene.add(donut1);
-donut1.position.set(-10, 0, 0);
+donut1.position.set(-15, 1, -1);
 
 
 // ABHI DONUT
@@ -103,8 +103,8 @@ scene.add(moon);
 moon.position.z = 30;
 moon.position.setX(-10);
 
-ani.position.z = -5;
-ani.position.x = 2;
+ani.position.x = 17;
+ani.position.z = -3.7;
 
 //torusKnot.position(-20,1,1);
 
@@ -137,6 +137,10 @@ function animate() {
  torus.rotation.x += 0.01; // rotation along x axis
  torus.rotation.y += 0.005; // roatation along y axis
  torus.rotation.z += 0.01; // rotation on z axis
+
+ donut1.rotation.x += 0.005; // rotation along x axis
+ donut1.rotation.y -= 0.01; // roatation along y axis
+ donut1.rotation.z -= 0.02; // rotation on z axis
 
  //torusKnot.rotation.x += 0.005; // rotation along x axis
  //torusKnot.rotation.y += 0.005;; // roatation along y axis
