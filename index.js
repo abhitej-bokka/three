@@ -128,7 +128,7 @@ moon.position.setX(-10);
 //moon.position.set(-10,0,30);
 
 orbit.position.setX(-6);
-orbit.position.z = -20;
+orbit.position.z = -15;
 
 
 abhi.position.x = 17;
