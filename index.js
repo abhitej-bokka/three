@@ -95,7 +95,7 @@ const abhi = new THREE.Mesh(
     })
 );
 scene.add(abhi);
-abii.position.x = 17;
+abhi.position.x = 17;
 abhi.position.z = -3.7;
 
 
@@ -120,9 +120,9 @@ torus.position.setX(13.5);
 
 moon.position(-10,0,30);
 
-abhi.position(2,0,-5);
+//abhi.position(2,0,-5);
 
-donut1.position.set(-10, 0, 10);
+donut1.position.set(-10, 0, -10);
 
 torusKnot.position(-20,1,1);
 
