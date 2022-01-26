@@ -1,6 +1,10 @@
 // import "./style.css";
 import * as THREE from "https://unpkg.com/three@0.127.0/build/three.module.js";
 import { OrbitControls } from "https://unpkg.com/three@0.127.0/examples/jsm/controls/OrbitControls.js";
+
+
+
+
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
  75,
@@ -11,12 +15,32 @@ const camera = new THREE.PerspectiveCamera(
 const renderer = new THREE.WebGLRenderer({
  canvas: document.querySelector("#bg"),
 });
+
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 camera.position.setZ(30);
 camera.position.setX(-3);
 renderer.render(scene, camera);
-//const geometry2 = new THREE.TorusKnotGeometry( 10, 3, 100, 16 );
+
+
+// OBJECT MAKING:
+
+// DONUT REQUIREMENTS:
+const radius = 5,tube = 2.8,radialSegments = 25,tubularSegments = 66,arc = Math.PI * 2;
+const loader2 = new THREE.TextureLoader();
+loader2.crossOrigin = '';
+const donutglazed = loader2.load('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Donut_texture%2C_Doughnut.jpg/800px-Donut_texture%2C_Doughnut.jpg');
+//const donutsprinkles = loader2.load('https://s3-us-west-2.amazonaws.com/sabrinamarkon-images/images/pinkdonutwithsprinkles.png');
+const donutGeometry = new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc);
+const donutMaterial = new THREE.MeshPhongMaterial({map: donutglazed});
+
+// First DONUT
+const donut1 = new THREE.Mesh(donutGeometry, donutMaterial);
+scene.add(donut1);
+donut1.position.set(-10, 0, -10);
+
+
+
 const geometry2 = new THREE.TorusKnotGeometry( 3, 0.75, 100, 16 );
 const material2 = new THREE.MeshBasicMaterial( { color: 0xff6347 } );
 const torusKnot = new THREE.Mesh( geometry2, material2 );
