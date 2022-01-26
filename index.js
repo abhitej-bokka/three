@@ -128,7 +128,7 @@ moon.position.setX(-10);
 //moon.position.set(-10,0,30);
 
 orbit.position.setX(-6);
-orbit.position.z = -15;
+orbit.position.z = 30;
 
 
 abhi.position.x = 17;
@@ -182,7 +182,7 @@ function animate() {
  donut2.rotation.y += 0.02; // roatation along y axis
  donut2.rotation.z += 0.04; // rotation on z axis
 
- theta += Math.PI/100;
+ theta += Math.PI/120;
  
  orbit.position.x += Math.sin(theta) * 0.5;
  orbit.position.y += Math.cos(theta) * 0.5;
