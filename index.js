@@ -27,18 +27,22 @@ renderer.render(scene, camera);
 
 // DONUT REQUIREMENTS:
 const radius = 5,tube = 2.8,radialSegments = 25,tubularSegments = 66,arc = Math.PI * 2;
-const loader2 = new THREE.TextureLoader();
+
+/*const donutTexture = new THREE.TextureLoader();
 loader2.crossOrigin = '';
 const donutglazed = loader2.load('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Donut_texture%2C_Doughnut.jpg/800px-Donut_texture%2C_Doughnut.jpg');
-//const donutsprinkles = loader2.load('https://s3-us-west-2.amazonaws.com/sabrinamarkon-images/images/pinkdonutwithsprinkles.png');
-const donutGeometry = new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc);
-const donutMaterial = new THREE.MeshPhongMaterial({map: donutglazed});
+const donutsprinkles = loader2.load('https://s3-us-west-2.amazonaws.com/sabrinamarkon-images/images/pinkdonutwithsprinkles.png');*/
 
-// First DONUT
+const donutGlazed = new THREE.TextureLoader().load('./assets/images/three/donut.jpg')
+const donutGeometry = new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc);
+const donutMaterial = new THREE.MeshPhongMaterial({map: donutGlazed});
+
+// FIRST DONUT
 const donut1 = new THREE.Mesh(donutGeometry, donutMaterial);
 scene.add(donut1);
 donut1.position.set(-15, 1, -1);
 
+//SECOND DONUT
 const donut2 = new THREE.Mesh(donutGeometry, donutMaterial);
 scene.add(donut2);
 donut2.position.set(-5, -20, -26);
@@ -98,7 +102,8 @@ const abhi = new THREE.Mesh(
  new THREE.MeshBasicMaterial({ map: abhiTexture })
 );
 scene.add(abhi);
-//MOOON
+
+//MOON
 //const moonTexture = new THREE.TextureLoader().load('moon.jpg')
 const moonTexture = new THREE.TextureLoader().load('./assets/images/three/moon.jpg')
 //const imageTexture = new THREE.TextureLoader().load('beach.jpg')
