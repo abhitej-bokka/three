@@ -56,7 +56,7 @@ scene.add(torus);
 
 
 // ORBIT DONUT
-const oradius = 1, otube = 0.56;
+const oradius = 0.5, otube = 0.28;
 const orbitGeometry = new THREE.TorusGeometry(oradius, otube, radialSegments, tubularSegments, arc);
 const orbit = new THREE.Mesh(orbitGeometry, donutMaterial);
 scene.add(orbit);
