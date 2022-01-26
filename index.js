@@ -32,8 +32,8 @@ const donutGeometry = new THREE.TorusGeometry(radius, tube, radialSegments, tubu
 const donutMaterial = new THREE.MeshPhongMaterial({map: donutglazed});
 
 // First DONUT
-const donut1 = new THREE.Mesh(donutGeometry, donutMaterial);
-scene.add(donut1);
+//const donut1 = new THREE.Mesh(donutGeometry, donutMaterial);
+//scene.add(donut1);
 
 
 // ABHI DONUT
@@ -46,8 +46,8 @@ scene.add(torus);
 // PREV. TORUSKNOT -> DONUT
 //const geometry2 = new THREE.TorusKnotGeometry(3, 0.75, 100, 16);
 //const material2 = new THREE.MeshBasicMaterial({color: 0xff6347});
-const torusKnot = new THREE.Mesh(donutGeometry, donutMaterial);
-scene.add(torusKnot);
+//const torusKnot = new THREE.Mesh(donutGeometry, donutMaterial);
+//scene.add(torusKnot);
 
 
 
@@ -122,9 +122,9 @@ moon.position(-10,0,30);
 
 //abhi.position(2,0,-5);
 
-donut1.position.set(-10, 0, -10);
+//donut1.position.set(-10, 0, -10);
 
-torusKnot.position(-20,1,1);
+//torusKnot.position(-20,1,1);
 
 
 // scroll abhimation
@@ -156,9 +156,9 @@ function animate() {
     torus.rotation.y += 0.005; // roatation along y axis
     torus.rotation.z += 0.01; // rotation on z axis
     
-    torusKnot.rotation.x += 0.005; // rotation along x axis
-    torusKnot.rotation.y += 0.005;; // roatation along y axis
-    torusKnot.rotation.z += 0.005; // rotation on z axis
+    //torusKnot.rotation.x += 0.005; // rotation along x axis
+    //torusKnot.rotation.y += 0.005;; // roatation along y axis
+    //torusKnot.rotation.z += 0.005; // rotation on z axis
    
     moon.rotation.x += 0.005;
     //controls.update();
