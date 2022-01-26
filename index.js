@@ -54,11 +54,13 @@ const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
 const torus = new THREE.Mesh(geometry, donutMaterial);
 scene.add(torus);
 
+/*
 // ORBIT DONUT
 const oradius = 2.5,otube = 1.4;
 const orbitGeometry = new THREE.TorusGeometry(oradius, otube, radialSegments, tubularSegments, arc);
 const orbit = new THREE.Mesh(orbitGeometry, donutMaterial);
 scene.add(orbit);
+*/
 
 /*
 // PREV. TORUSKNOT -> DONUT
@@ -125,7 +127,7 @@ scene.add(moon);
 //moon.position.setX(-10);
 moon.position.set(-10,0,30);
 
-orbit.position.set(-6,0,30);
+//orbit.position.set(-6,0,30);
 
 
 //abhi.position.x = 17;
@@ -179,6 +181,7 @@ function animate() {
  donut2.rotation.y += 0.02; // roatation along y axis
  donut2.rotation.z += 0.04; // rotation on z axis
 
+ /*
  orbit.position.x += Math.sin(time) * 0.5;
  orbit.position.y += Math.cos(time) * 0.5;
  orbit.position.z += Math.cos(time) * 0.5;
@@ -186,7 +189,7 @@ function animate() {
  orbit.rotation.x -= 0.008; // rotation along x axis
  orbit.rotation.y += 0.02; // roatation along y axis
  orbit.rotation.z -= 0.005; // rotation on z axis
- 
+ */
  //---------------------------------------------------
  
  torus.rotation.x += 0.01; // rotation along x axis
