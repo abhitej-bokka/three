@@ -37,7 +37,7 @@ const donutMaterial = new THREE.MeshPhongMaterial({map: donutglazed});
 // First DONUT
 const donut1 = new THREE.Mesh(donutGeometry, donutMaterial);
 scene.add(donut1);
-donut1.position.set(-10, 0, -10);
+donut1.position.set(-10, 0, 0);
 
 
 // ABHI DONUT
@@ -46,13 +46,13 @@ const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
 const torus = new THREE.Mesh(geometry, donutMaterial);
 scene.add(torus);
 
-
+/*
 // PREV. TORUSKNOT -> DONUT
 //const geometry2 = new THREE.TorusKnotGeometry(3, 0.75, 100, 16);
 //const material2 = new THREE.MeshBasicMaterial({color: 0xff6347});
 const torusKnot = new THREE.Mesh(donutGeometry, donutMaterial);
 scene.add(torusKnot);
-
+*/
 
 
 // Lights
@@ -81,7 +81,7 @@ function addStar() {
 Array(250).fill().forEach(addStar);
 
 // changes bg
-const spaceTexture = new THREE.TextureLoader().load('abhi.jpg')
+const spaceTexture = new THREE.TextureLoader().load('space.jpg')
 scene.background = spaceTexture;
 // avatar
 const aniTexture = new THREE.TextureLoader().load('abhi.jpg')
@@ -106,7 +106,7 @@ moon.position.setX(-10);
 ani.position.z = -5;
 ani.position.x = 2;
 
-torusKnot.position(-20,1,1);
+//torusKnot.position(-20,1,1);
 
 torus.position.setX(13.5);
 
@@ -138,9 +138,9 @@ function animate() {
  torus.rotation.y += 0.005; // roatation along y axis
  torus.rotation.z += 0.01; // rotation on z axis
 
- torusKnot.rotation.x += 0.005; // rotation along x axis
- torusKnot.rotation.y += 0.005;; // roatation along y axis
- torusKnot.rotation.z += 0.005; // rotation on z axis
+ //torusKnot.rotation.x += 0.005; // rotation along x axis
+ //torusKnot.rotation.y += 0.005;; // roatation along y axis
+ //torusKnot.rotation.z += 0.005; // rotation on z axis
  moon.rotation.x += 0.005;
  //controls.update();
  renderer.render(scene, camera);
