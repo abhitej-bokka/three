@@ -85,19 +85,25 @@ function addStar() {
 Array(250).fill().forEach(addStar);
 
 // changes bg
-const spaceTexture = new THREE.TextureLoader().load('space.jpg')
+//const spaceTexture = new THREE.TextureLoader().load('space.jpg')
+const spaceTexture = new THREE.TextureLoader().load('./assets/images/three/space.jpg')
+
 scene.background = spaceTexture;
 // avatar
-const aniTexture = new THREE.TextureLoader().load('abhi.jpg')
-const ani = new THREE.Mesh(
+//const aniTexture = new THREE.TextureLoader().load('abhi.jpg')
+const abhiTexture = new THREE.TextureLoader().load('./assets/images/three/abhi.jpg')
+const abhi = new THREE.Mesh(
  new THREE.BoxGeometry(6, 6, 6),
  //map prop on the material as a texture
- new THREE.MeshBasicMaterial({ map: aniTexture })
+ new THREE.MeshBasicMaterial({ map: abhiTexture })
 );
-scene.add(ani);
+scene.add(abhi);
 //MOOON
-const moonTexture = new THREE.TextureLoader().load('moon.jpg')
-const imageTexture = new THREE.TextureLoader().load('beach.jpg')
+//const moonTexture = new THREE.TextureLoader().load('moon.jpg')
+const moonTexture = new THREE.TextureLoader().load('./assets/images/three/moon.jpg')
+//const imageTexture = new THREE.TextureLoader().load('beach.jpg')
+const imageTexture = new THREE.TextureLoader().load('./assets/images/three/normal.jpg')
+
 const moon = new THREE.Mesh(
  new THREE.SphereGeometry(3, 32, 32),
  new THREE.MeshStandardMaterial({ map: moonTexture, normalMap: imageTexture })
@@ -107,8 +113,8 @@ scene.add(moon);
 moon.position.z = 30;
 moon.position.setX(-10);
 
-ani.position.x = 17;
-ani.position.z = -3.7;
+abhi.position.x = 17;
+abhi.position.z = -3.7;
 
 //torusKnot.position(-20,1,1);
 
@@ -122,8 +128,8 @@ function moveCamera() {
  moon.rotation.x += 0.05;
  moon.rotation.y += 0.075;
  moon.rotation.z += 0.05;
- ani.rotation.y += 0.01;
- ani.rotation.z += 0.01;
+ abhi.rotation.y += 0.01;
+ abhi.rotation.z += 0.01;
  //camera.rotation.z = t * -0.01;
  camera.rotation.z = t * -0.0001;
  camera.rotation.x = t * -0.0002;
