@@ -134,6 +134,15 @@ moveCamera(); // thr func is assigned as the event handler for the document body
 function animate() {
  requestAnimationFrame(animate);
 
+ const time = Date.now() * 0.0005;
+
+ donut1.position.x += Math.sin(time * 0.7) * 1;
+ donut1.position.y += Math.cos(time * 0.5) * 2;
+ donut1.position.z += Math.cos(time * 0.3) * 1;
+
+
+
+
  torus.rotation.x += 0.01; // rotation along x axis
  torus.rotation.y += 0.005; // roatation along y axis
  torus.rotation.z += 0.01; // rotation on z axis
