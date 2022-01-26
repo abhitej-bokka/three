@@ -1,215 +1,161 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>3D Portfolio</title>
-</head>
-
-<body>
-
-    <canvas id="bg"></canvas>
-
-    <main>
-
-        <header>
-            <h1>Who is<br>Abhitej Bokka?</h1>
-            <p>Let's find out 🚀</p>
-        </header>
+// import "./style.css";
+import * as THREE from "https://unpkg.com/three@0.127.0/build/three.module.js";
+import { OrbitControls } from "https://unpkg.com/three@0.127.0/examples/jsm/controls/OrbitControls.js";
 
 
-        <blockquote>
-            <p> Keep Scrolling...</p>
-        </blockquote>
-
-        <section>
-            <h2>About Me</h2>
- 
-            <p>
-📚 I'm at Rutgers studying CS & Statistics <br>
-🔭 I’m currently working on a JavaScript project to rate off-campus housing with a friend <br>
-🌱 I’m currently learning React.js & Solidity <br>
-👯 I’m looking to collaborate on any web3.0 projects <br>
-💬 Ask me about Marvel, keeping aquariums, or philosophy <br>
-            </p>
-
-        </section>
-        
-        <blockquote>
-            <p> What do I do outside of coding though?</p>
-        </blockquote>
-      
-             <section>
-            
-             <h3>Basketball</h3>
-            <p>
-                You can find me at the College Ave Gym shooting baskets with my friends.
-            </p>
-            <h3>Baking</h3>
-            <p>
-                Cakes & Brownies are my go to whenever I'm craving some desert.
-            </p>
-            <h3>Table Tennis</h3>
-            <p>
-                It's great to take a break from work to play ping pong and I'll always try to curve the ball.
-            </p>
-           
-
-        </section>
-        
-         <section>
-            <h2>Unrelated stuff about Me</h2>
-
-            <p>
-                I have 2 fish tanks 🐟!
-                I have about... <br>
-                 - 13 Neon Tetras <br>
-                 - 7 Serpae Tetras <br>
-                 - 5 Nerite Snails 🐌 <br>
-                 - 4 Ember Tetras <br>
-                 - 3 Black Neon Tetras <br>
-                 - 3 Orange Guppies <br>
-                 - 1 Amano Shrimp 🦐<br>
-            </p>
-
-        </section>
-        
-        
-        <section>
-
-            <h2>Tech I work with:</h2>
-            Java has been that language that will stick with me for life because it helped me understand the fundamentals of OOP and the functionality that one can implement as a programmer.
-            I find JavaScript very versatile and easy to implement for web development like I have done right now with github pages and its very easy to work with its frameworks.
-            MongoDB and SQL have been good tools to understand data management and helped me connect my projects to create full stack applications.
-            
-
-<h4>Proficient:</h4>	
-
-<!-- <div class="col-xs-12 col-md-12">
--->
-<p>
-<img src="./assets/images/skills/java.jpg" alt="Avatar" style="width:100px;height:100px;">
-
-<img src="./assets/images/skills/cp.png" alt="Avatar" style="width:100px;height:100px;">
-
-<img src="./assets/images/skills/js.jpg" alt="Avatar" style="width:100px;height:100px;">
-
-<img src="./assets/images/skills/ne.png" alt="Avatar" style="width:100px;height:100px;">
-
-</div>
-
-<h4>Intermediate:</h4>	
-
-<!-- <div class="col-xs-12 col-md-12">
--->
-
-<p>
-
-<img src="./assets/images/skills/mongodb.png" alt="Avatar" style="width:100px;height:100px;">
-
-<img src="./assets/images/skills/sql.png" alt="Avatar" style="width:100px;height:100px;">
 
 
-<img src="./assets/images/skills/react2.jpg" alt="Avatar" style="width:100px;height:100px;">
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(
+ 75,
+ window.innerWidth / window.innerHeight,
+ 0.1,
+ 1000
+);
+const renderer = new THREE.WebGLRenderer({
+ canvas: document.querySelector("#bg"),
+});
 
-<img src="./assets/images/skills/solid2.jpg" alt="Avatar" style="width:100px;height:100px;">
-</div>
+renderer.setPixelRatio(window.devicePixelRatio);
+renderer.setSize(window.innerWidth, window.innerHeight);
+camera.position.setZ(30);
+camera.position.setX(-3);
+renderer.render(scene, camera);
 
-        </section>
 
-    
-    
-        <blockquote>
-            <p>What work have I done?</p>
-        </blockquote>
+// OBJECT MAKING:
 
-    
-    
-        <section>
-            <h2>Work Experience</h2>
+// DONUT REQUIREMENTS:
+const radius = 5,tube = 2.8,radialSegments = 25,tubularSegments = 66,arc = Math.PI * 2;
+const loader2 = new THREE.TextureLoader();
+loader2.crossOrigin = '';
+const donutglazed = loader2.load('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Donut_texture%2C_Doughnut.jpg/800px-Donut_texture%2C_Doughnut.jpg');
+//const donutsprinkles = loader2.load('https://s3-us-west-2.amazonaws.com/sabrinamarkon-images/images/pinkdonutwithsprinkles.png');
+const donutGeometry = new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments, arc);
+const donutMaterial = new THREE.MeshPhongMaterial({map: donutglazed});
 
-            <h3>Rutgers Mobile App Development Mentor</h3>
-            May 2021 - Present
-            <p>
-                <li>Assisted a mobile app dev. club in teaching 9 students JavaScript to further their skills in backend development.
-                <li>Taught content about using Node.js & Express.js, using bcrypt & JWT tokens for authentication, and built    REST APIs to connect to MongoDB Atlas. Interviewed applicants for this accelerated teaching program. 
+// First DONUT
+const donut1 = new THREE.Mesh(donutGeometry, donutMaterial);
+scene.add(donut1);
+donut1.position.set(-15, 1, -1);
 
-            </p>
-            <p></p>
-            <h3>Freelance Computer Science, Math, and ACT Tutor</h3>
-            October 2018 - April 2021
-            <p>
-                <li>Tutored students for courses in AP Biology, AP Calculus, ACT Math, Linear Algebra & Computer Science.</li>
-                <li>Helped 3 of my Linear Algebra students & 2 of my Calculus III students to achieve A’s on their finals.</li>
-                <li>Worked to understand individual needs to find the best studying techniques and learning styles for tutees.</li>
 
-            </p>
-            <p></p>
-            <h3>FedEx Ground Package Handler</h3>
-            August 2020 - September 2020
-                    
-            <p>
-                <li>Effectively handled groups of oncoming packages and sorted over 500+ products daily for morning deliveries.</li>
-            </p>
-            <p></p>
-            <h3>Rutgers Laboratory Assistant Internship</h3>
-            June 2019 - August 2019
-                    <p>
-                <li>Researched protein ubiquitination and degradation by the proteasome under Dr. Li Chen at RWJMS.</li>
-                <li>Conducted various experiments from yeast transformation to immunoprecipitation to show a gene named Rad23 plays a crucial role in interaction with the proteasome and its substrates.</li>
-                <li>Automated calculations for spectrometry with Java and designed spectrometry graphs with Google Sheets.</li>
-                    </p>
+// ABHI DONUT
+const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
+//const material = new THREE.MeshStandardMaterial({color: 0x479eff});
+const torus = new THREE.Mesh(geometry, donutMaterial);
+scene.add(torus);
 
-        </section>
+/*
+// PREV. TORUSKNOT -> DONUT
+//const geometry2 = new THREE.TorusKnotGeometry(3, 0.75, 100, 16);
+//const material2 = new THREE.MeshBasicMaterial({color: 0xff6347});
+const torusKnot = new THREE.Mesh(donutGeometry, donutMaterial);
+scene.add(torusKnot);
+*/
 
-        <blockquote>
-            <p>Thanks for making it all the way here!</p>
-            <br>
-        
-        </blockquote>
-        <style>
-.button {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #008CBA;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
+
+// Lights
+const pointLight = new THREE.PointLight(0xffffff);
+pointLight.position.set(5, 5, 5);
+const ambientLight = new THREE.AmbientLight(0xffffff);
+const ambientLight2 = new THREE.PointLight(0x808080);
+ambientLight2.position.set(-27, 5, 5);
+ambientLight2.decay = 2;
+
+scene.add(pointLight, ambientLight, ambientLight2);
+
+
+function addStar() {
+ const geometry = new THREE.SphereGeometry(0.2, 24, 24);
+ const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
+ const star = new THREE.Mesh(geometry, material);
+ const [x, y, z] = Array(3)
+   .fill()
+   .map(() => THREE.MathUtils.randFloatSpread(100));
+ star.position.set(x, y, z);
+ scene.add(star);
 }
 
-.button:hover {background-color: #0487B3}
+// Arra of 250 values and then for each value calls the addStar function
+Array(250).fill().forEach(addStar);
 
-.button:active {
-  background-color: #037DA6;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+// changes bg
+const spaceTexture = new THREE.TextureLoader().load('space.jpg')
+scene.background = spaceTexture;
+// avatar
+const aniTexture = new THREE.TextureLoader().load('abhi.jpg')
+const ani = new THREE.Mesh(
+ new THREE.BoxGeometry(6, 6, 6),
+ //map prop on the material as a texture
+ new THREE.MeshBasicMaterial({ map: aniTexture })
+);
+scene.add(ani);
+//MOOON
+const moonTexture = new THREE.TextureLoader().load('moon.jpg')
+const imageTexture = new THREE.TextureLoader().load('beach.jpg')
+const moon = new THREE.Mesh(
+ new THREE.SphereGeometry(3, 32, 32),
+ new THREE.MeshStandardMaterial({ map: moonTexture, normalMap: imageTexture })
+);
+scene.add(moon);
+// Repostionisng moon to further down of z axis as that is the direction of scroll
+moon.position.z = 30;
+moon.position.setX(-10);
+
+ani.position.x = 17;
+ani.position.z = -3.7;
+
+//torusKnot.position(-20,1,1);
+
+torus.position.setX(13.5);
+
+
+// scroll Animation
+function moveCamera() {
+ // top prop here shows how far we are from the top of the webpage
+ const t = document.body.getBoundingClientRect().top;
+ moon.rotation.x += 0.05;
+ moon.rotation.y += 0.075;
+ moon.rotation.z += 0.05;
+ ani.rotation.y += 0.01;
+ ani.rotation.z += 0.01;
+ //camera.rotation.z = t * -0.01;
+ camera.rotation.z = t * -0.0001;
+ camera.rotation.x = t * -0.0002;
+ camera.rotation.y = t * -0.0002;
 }
-</style>
+// fire the func when scrolled
+document.body.onscroll = moveCamera;
+moveCamera(); // thr func is assigned as the event handler for the document body on scroll event
+// Animation
+// renderer.render( scene, camera );
+// Alternate below
+function animate() {
+ requestAnimationFrame(animate);
 
-<footer class="footer-container text-center">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-	<a href="https://abhitej-bokka.github.io/about.html" class="button">Downgrade</a>
-      </div>
-    </div>
-  </div>
-</footer>
+ const time = Date.now() * 0.0005;
+
+ donut1.position.x += Math.sin(time) * 0.001;
+ donut1.position.y += Math.cos(time) * 0.001;
+ donut1.position.z += Math.cos(time) * 0.001;
 
 
-    </main>
 
-    <script type="module" src="./index.js"></script>
 
-</body>
+ torus.rotation.x += 0.01; // rotation along x axis
+ torus.rotation.y += 0.005; // roatation along y axis
+ torus.rotation.z += 0.01; // rotation on z axis
 
-</html>
+ donut1.rotation.x += 0.005; // rotation along x axis
+ donut1.rotation.y -= 0.01; // roatation along y axis
+ donut1.rotation.z -= 0.02; // rotation on z axis
+
+ //torusKnot.rotation.x += 0.005; // rotation along x axis
+ //torusKnot.rotation.y += 0.005;; // roatation along y axis
+ //torusKnot.rotation.z += 0.005; // rotation on z axis
+ moon.rotation.x += 0.005;
+ //controls.update();
+ renderer.render(scene, camera);
+}
+animate();
