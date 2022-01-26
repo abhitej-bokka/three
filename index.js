@@ -54,6 +54,11 @@ const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
 const torus = new THREE.Mesh(geometry, donutMaterial);
 scene.add(torus);
 
+// ORBIT DONUT
+const orbitGeometry = new THREE.TorusGeometry(2.5, 1.4, radialSegments, tubularSegments, arc);
+const orbit = new THREE.Mesh(orbitGeometry, donutMaterial);
+scene.add(orbit);
+
 /*
 // PREV. TORUSKNOT -> DONUT
 //const geometry2 = new THREE.TorusKnotGeometry(3, 0.75, 100, 16);
@@ -115,15 +120,21 @@ const moon = new THREE.Mesh(
 );
 scene.add(moon);
 // Repostionisng moon to further down of z axis as that is the direction of scroll
-moon.position.z = 30;
-moon.position.setX(-10);
+//moon.position.z = 30;
+//moon.position.setX(-10);
+moon.position(-10,0,30);
 
-abhi.position.x = 17;
-abhi.position.z = -3.7;
+orbit.position(-6,0,30);
+
+
+//abhi.position.x = 17;
+//abhi.position.z = -3.7;
+abhi.position(17,0,-3.7);
 
 //torusKnot.position(-20,1,1);
 
-torus.position.setX(13.5);
+//torus.position.setX(13.5);
+torus.position(13.5,0,0);
 
 
 // scroll Animation
@@ -167,6 +178,16 @@ function animate() {
  donut2.rotation.y += 0.02; // roatation along y axis
  donut2.rotation.z += 0.04; // rotation on z axis
 
+ orbit.position.x += Math.sin(time) * 0.5;
+ orbit.position.y += Math.cos(time) * 0.5;
+ orbit.position.z += Math.cos(time) * 0.5;
+
+ orbit.rotation.x -= 0.008; // rotation along x axis
+ orbit.rotation.y += 0.02; // roatation along y axis
+ orbit.rotation.z -= 0.005; // rotation on z axis
+ 
+ //---------------------------------------------------
+ 
  torus.rotation.x += 0.01; // rotation along x axis
  torus.rotation.y += 0.005; // roatation along y axis
  torus.rotation.z += 0.01; // rotation on z axis
