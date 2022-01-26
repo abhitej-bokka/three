@@ -39,6 +39,10 @@ const donut1 = new THREE.Mesh(donutGeometry, donutMaterial);
 scene.add(donut1);
 donut1.position.set(-15, 1, -1);
 
+const donut2 = new THREE.Mesh(donutGeometry, donutMaterial);
+scene.add(donut2);
+donut2.position.set(-15, -20, -16);
+
 
 // ABHI DONUT
 const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
@@ -140,16 +144,23 @@ function animate() {
  donut1.position.y += Math.cos(time) * 0.5;
  donut1.position.z += Math.cos(time) * 0.5;
 
+ donut1.rotation.x += 0.005; // rotation along x axis
+ donut1.rotation.y -= 0.01; // roatation along y axis
+ donut1.rotation.z -= 0.02; // rotation on z axis
 
-
+ donut2.position.x += Math.sin(time) * 0.2;
+ donut2.position.y += Math.cos(time) * 0.2;
+ donut2.position.z += Math.cos(time) * 0.2;
+ 
+ donut2.rotation.x += 0.02; // rotation along x axis
+ donut2.rotation.y += 0.02; // roatation along y axis
+ donut2.rotation.z += 0.04; // rotation on z axis
 
  torus.rotation.x += 0.01; // rotation along x axis
  torus.rotation.y += 0.005; // roatation along y axis
  torus.rotation.z += 0.01; // rotation on z axis
 
- donut1.rotation.x += 0.005; // rotation along x axis
- donut1.rotation.y -= 0.01; // roatation along y axis
- donut1.rotation.z -= 0.02; // rotation on z axis
+ 
 
  //torusKnot.rotation.x += 0.005; // rotation along x axis
  //torusKnot.rotation.y += 0.005;; // roatation along y axis
