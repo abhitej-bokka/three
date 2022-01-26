@@ -123,21 +123,21 @@ const moon = new THREE.Mesh(
 );
 scene.add(moon);
 // Repostionisng moon to further down of z axis as that is the direction of scroll
-//moon.position.z = 30;
-//moon.position.setX(-10);
-moon.position.set(-10,0,30);
+moon.position.z = 30;
+moon.position.setX(-10);
+//moon.position.set(-10,0,30);
 
 //orbit.position.set(-6,0,30);
 
 
-//abhi.position.x = 17;
-//abhi.position.z = -3.7;
-abhi.position.set(17,0,-3.7);
+abhi.position.x = 17;
+abhi.position.z = -3.7;
+//abhi.position.set(17,0,-3.7);
 
 //torusKnot.position(-20,1,1);
 
-//torus.position.setX(13.5);
-torus.position.set(13.5,0,0);
+torus.position.setX(13.5);
+//torus.position.set(13.5,0,0);
 
 
 // scroll Animation
