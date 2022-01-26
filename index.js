@@ -182,7 +182,7 @@ function animate() {
  donut2.rotation.y += 0.02; // roatation along y axis
  donut2.rotation.z += 0.04; // rotation on z axis
 
- theta += Math.PI/120;
+ theta += Math.PI/200;
  
  orbit.position.x += Math.sin(theta) * 0.5;
  orbit.position.y += Math.cos(theta) * 0.5;
