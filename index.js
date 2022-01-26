@@ -130,9 +130,9 @@ torus.position.setX(13.5);
 function moveCamera() {
  // top prop here shows how far we are from the top of the webpage
  const t = document.body.getBoundingClientRect().top;
- moon.rotation.x += 0.05;
- moon.rotation.y += 0.075;
- moon.rotation.z += 0.05;
+ moon.rotation.x += 0.005;
+ moon.rotation.y += 0.005;
+ moon.rotation.z += 0.005;
  abhi.rotation.y += 0.01;
  abhi.rotation.z += 0.01;
  //camera.rotation.z = t * -0.01;
