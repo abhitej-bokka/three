@@ -136,9 +136,9 @@ function animate() {
 
  const time = Date.now() * 0.0005;
 
- donut1.position.x += Math.sin(time) * 0.02;
- donut1.position.y += Math.cos(time) * 0.02;
- donut1.position.z += Math.cos(time) * 0.02;
+ donut1.position.x += Math.sin(time) * 0.5;
+ donut1.position.y += Math.cos(time) * 0.5;
+ donut1.position.z += Math.cos(time) * 0.5;
 
 
 
