@@ -127,7 +127,7 @@ moon.position.z = 30;
 moon.position.setX(-10);
 //moon.position.set(-10,0,30);
 
-orbit.position.setX(-6);
+orbit.position.setX(-14);
 orbit.position.z = 30;
 
 
