@@ -40,20 +40,21 @@ scene.add(donut1);
 donut1.position.set(-10, 0, -10);
 
 
-
-const geometry2 = new THREE.TorusKnotGeometry( 3, 0.75, 100, 16 );
-const material2 = new THREE.MeshBasicMaterial( { color: 0xff6347 } );
-const torusKnot = new THREE.Mesh( geometry2, material2 );
-scene.add( torusKnot );
-// object
-// Torus
+// ABHI DONUT
 const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
-//changed color 1-23-22
-//const material = new THREE.MeshStandardMaterial({ color: 0xff6347 });
-const material = new THREE.MeshStandardMaterial({ color: 0x479eff });
-const torus = new THREE.Mesh(geometry, material);
-//adding to the scene below
+//const material = new THREE.MeshStandardMaterial({color: 0x479eff});
+const torus = new THREE.Mesh(geometry, donutMaterial);
 scene.add(torus);
+
+
+// PREV. TORUSKNOT -> DONUT
+//const geometry2 = new THREE.TorusKnotGeometry(3, 0.75, 100, 16);
+//const material2 = new THREE.MeshBasicMaterial({color: 0xff6347});
+const torusKnot = new THREE.Mesh(donutGeometry, donutMaterial);
+scene.add(torusKnot);
+
+
+
 // Lights
 const pointLight = new THREE.PointLight(0xffffff);
 pointLight.position.set(5, 5, 5);
@@ -61,13 +62,10 @@ const ambientLight = new THREE.AmbientLight(0xffffff);
 const ambientLight2 = new THREE.PointLight(0x808080);
 ambientLight2.position.set(-27, 5, 5);
 ambientLight2.decay = 2;
-// moon -10,0,30
-// torus -20, 1, 1
+
 scene.add(pointLight, ambientLight, ambientLight2);
-// const lightHelper = new THREE.PointLightHelper(pointLight)
-// const gridHelper = new THREE.GridHelper( 200, 50 )
-// scene.add(lightHelper, gridHelper)
-// const controls = new OrbitControls(camera, renderer.domElement); // Listen to dom events on the mouse and update the camera pos accordingly
+
+
 function addStar() {
  const geometry = new THREE.SphereGeometry(0.2, 24, 24);
  const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
@@ -78,8 +76,10 @@ function addStar() {
  star.position.set(x, y, z);
  scene.add(star);
 }
+
 // Arra of 250 values and then for each value calls the addStar function
 Array(250).fill().forEach(addStar);
+
 // changes bg
 const spaceTexture = new THREE.TextureLoader().load('space.jpg')
 scene.background = spaceTexture;
@@ -102,11 +102,15 @@ scene.add(moon);
 // Repostionisng moon to further down of z axis as that is the direction of scroll
 moon.position.z = 30;
 moon.position.setX(-10);
+
 ani.position.z = -5;
 ani.position.x = 2;
-torusKnot.position.setX(-20);
-torusKnot.position.y = 1;
-torusKnot.position.z = 1;
+
+torusKnot.position(-20,1,1);
+
+torus.position.setX(13.5);
+
+
 // scroll Animation
 function moveCamera() {
  // top prop here shows how far we are from the top of the webpage
@@ -129,9 +133,11 @@ moveCamera(); // thr func is assigned as the event handler for the document body
 // Alternate below
 function animate() {
  requestAnimationFrame(animate);
+
  torus.rotation.x += 0.01; // rotation along x axis
  torus.rotation.y += 0.005; // roatation along y axis
  torus.rotation.z += 0.01; // rotation on z axis
+
  torusKnot.rotation.x += 0.005; // rotation along x axis
  torusKnot.rotation.y += 0.005;; // roatation along y axis
  torusKnot.rotation.z += 0.005; // rotation on z axis
