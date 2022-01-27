@@ -174,9 +174,9 @@ function animate() {
  donut1.rotation.y -= 0.01; // roatation along y axis
  donut1.rotation.z -= 0.02; // rotation on z axis
 
- donut2.position.x -= Math.sin(time) * 0.2;
- donut2.position.y -= Math.cos(time) * 0.2;
- donut2.position.z -= Math.cos(time) * 0.2;
+ donut2.position.x -= Math.sin(time+5) * 0.2;
+ donut2.position.y -= Math.cos(time+5) * 0.2;
+ donut2.position.z -= Math.cos(time+5) * 0.2;
  
  donut2.rotation.x += 0.02; // rotation along x axis
  donut2.rotation.y += 0.02; // roatation along y axis
