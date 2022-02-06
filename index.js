@@ -188,7 +188,7 @@ function animate() {
  orbit.position.y += Math.cos(theta) * 0.0525;
  orbit.position.z += Math.cos(theta) * 0.0525;
 
- orbit.rotation.x -= 0.008; // rotation along x axis
+ orbit.rotation.x -= 0.04; // rotation along x axis
  orbit.rotation.y += 0.02; // roatation along y axis
  orbit.rotation.z -= 0.005; // rotation on z axis
  
